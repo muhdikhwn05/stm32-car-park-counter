@@ -9,7 +9,8 @@ An embedded car park counter system built using bare-metal register manipulation
 *   **Bare-Metal GPIO Configuration:** Bypasses HAL for GPIO initialization, directly manipulating `MODER`, `OTYPER`, and `PUPDR` registers.
 *   **Capacity Tracking (0-10):** Automatically increments on entry and decrements on exit.
 *   **Hardware Debouncing Logic:** Implements polling delays to ensure accurate button presses.
-*   **Custom FULL Animation:** When the counter hits 10, the green LED turns off, and the 7-segment display cycles through the letters `F -> U -> L -> L`.
+*   **Seven segment display** Shows number of vacant park.
+*   **Custom FULL Animation:** When the counter hits i=10, the green LED turns off, and the 7-segment display cycles through the letters `F -> U -> L -> L`.
 
 ## 🔌 Hardware & Pin Configuration
 
@@ -100,7 +101,7 @@ int main(void)
         uint32_t mask = 0xFFFF;
 
         if (i == 0)
-            mask = ~(SEG_A | SEG_F | SEG_D | SEG_E | SEG_G); // Show 0
+            mask = ~(SEG_A | SEG_F | SEG_D | SEG_E | SEG_G); // show E(stands for empty park)
         else if (i == 1)
             mask = ~(SEG_B | SEG_C); // Show 1
         else if (i == 2)
