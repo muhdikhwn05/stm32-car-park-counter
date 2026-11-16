@@ -37,11 +37,12 @@ An embedded car park counter system built using bare-metal register manipulation
 2. Build the project and flash it to the STM32L432KC Nucleo-32 board.
 3. Wire the components on a breadboard according to the pinout table above.
 
-## Hardware Setup
-![Breadboard Setup](image_fa53d1.jpg)
-
 ## Schematic
-![Wokwi Schematic](carpark%20wokwi%20schematic.png)
+![Wokwi Schematic](<img width="811" height="601" alt="image" src="https://github.com/user-attachments/assets/7b87e0f1-703c-4955-8657-0aeba67b10ad" />)
+
+## Hardware Setup
+![Breadboard Setup](<img width="785" height="432" alt="image" src="https://github.com/user-attachments/assets/be7b3d76-91e1-447d-9322-e0ec46c66f76" />)
+
 
 ## Coding
 #include "main.h"
